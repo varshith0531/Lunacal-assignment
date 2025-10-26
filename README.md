@@ -1,9 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Widget Dashboard
+
+A modern, responsive Next.js application featuring interactive widgets with a sleek dark theme design. This project showcases two main components: an About Me widget with tabbed navigation and a Gallery widget with image carousel functionality.
+
+## Features
+
+### About Me Widget
+- **Tabbed Interface**: Switch between "About Me", "Experiences", and "Recommended" sections
+- **Smooth Animations**: Sliding background indicator with smooth transitions
+- **Responsive Design**: Adapts to different screen sizes
+- **Dark Theme**: Modern dark color scheme with gray accents
+
+### Gallery Widget
+- **Image Carousel**: Navigate through a collection of images with previous/next buttons
+- **Responsive Grid**: Displays 2-4 images based on screen size
+  - Mobile: 2 images
+  - Tablet: 3 images  
+  - Desktop: 4 images
+- **Add Image Button**: Placeholder for adding new images
+- **Hover Effects**: Images scale on hover for better interactivity
+
+## Tech Stack
+
+- **Framework**: Next.js 16.0.0 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **React**: React 19.2.0 with hooks
+- **Linting**: ESLint with Next.js configuration
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm, yarn, pnpm, or bun
 
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd Assignment
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +61,61 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── AboutMeWidget.tsx    # About Me widget with tabbed interface
+│   │   └── GalleryWidget.tsx    # Gallery widget with image carousel
+│   ├── assets/                  # Image assets (img1.jpg - img6.jpg)
+│   ├── globals.css             # Global styles and Tailwind imports
+│   ├── layout.tsx              # Root layout component
+│   └── page.tsx                # Main page with widget layout
+└── public/
+    └── assets/                  # Public image assets
+```
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Build the application for production
+- `npm run start` - Start the production server
+- `npm run lint` - Run ESLint for code quality checks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dark Theme**: Consistent dark color palette (#191B1F, #363C43, #2E3237)
+- **Responsive Layout**: Mobile-first design with breakpoints for tablet and desktop
+- **Smooth Animations**: CSS transitions for interactive elements
+- **Modern UI**: Rounded corners, shadows, and hover effects
+- **Accessibility**: Proper contrast ratios and interactive elements
 
-## Deploy on Vercel
+## Customization
+
+### Adding New Images
+Place new images in the `public/assets/` directory and update the `images` array in `GalleryWidget.tsx`.
+
+### Modifying Content
+Update the About Me content in the `AboutMeWidget.tsx` component.
+
+### Styling Changes
+Modify the Tailwind classes in the component files or update `globals.css` for global styles.
+
+## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Learn More
+
+To learn more about the technologies used:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Tailwind CSS](https://tailwindcss.com/docs) - utility-first CSS framework
+- [React Documentation](https://react.dev/) - learn about React features and hooks
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/) - learn about TypeScript
